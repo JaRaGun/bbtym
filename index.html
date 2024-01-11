@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bb tym</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href='./node_modules/atropos/atropos.css' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body class="bg-gradient-to-r from-cyan-500 to-blue-500">
+    <div class="h-screen relative flex flex-col gap-5 justify-center items-center">
+ 
+
+        <div class="atropos my-atropos ">
+            <!-- scale container (required) -->
+            <div class="atropos-scale">
+              <!-- rotate container (required) -->
+              <div class="atropos-rotate">
+                <!-- inner container (required) -->
+                <div class="atropos-inner rounded-lg">
+                    <img class="absolute" src="./assets/bg.svg" data-atropos-offset="-5">
+                    <img class="absolute" src="./assets/more stars.png" data-atropos-offset="0" /> 
+                    <img id="buggy-happy" class="absolute w-32 top-[68px] left-[10px] hidden" src="./assets/happy.gif" data-atropos-offset="5" />
+                    <img id="buggy-pleading"class="absolute w-32 top-[68px] left-[10px] " src="./assets/please.gif" data-atropos-offset="5" />
+                    <div class="question-text absolute top-[164px] left-[5px]" data-atropos-offset="5" >
+                        <h1>BB TYM TAYO?</h1>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="answer ">
+            <button class="bn54" id="yes-btn"><span class="bn54span">YES</span></button>
+            <button class="bn54No mt-2" id="randomButton"><span class="bn54spanNo">NO</span></button>
+          </div>
+    </div>
+    <script src="./node_modules/atropos/atropos.min.js"></script>
+    <script>
+      const myAtropos = Atropos({
+        el: '.my-atropos',
+        // rest of parameters
+      });
+    </script>
+    <script src="./script.js"></script>
+</body>
+</html>
