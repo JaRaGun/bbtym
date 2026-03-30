@@ -7,7 +7,11 @@ document.addEventListener('mousemove', (event) => {
   const pointerX = event.clientX;
   const pointerY = event.clientY;
 
-  const distance = Math.sqrt((pointerX - button.offsetLeft) ** 2 + (pointerY - button.offsetTop) ** 2);
+  const rect = button.getBoundingClientRect();
+  const buttonX = rect.left + rect.width / 2;
+  const buttonY = rect.top + rect.height / 2;
+
+  const distance = Math.sqrt((pointerX - buttonX) ** 2 + (pointerY - buttonY) ** 2);
 
   // Adjust this threshold based on how close you want the pointer to be for the button to move
   const proximityThreshold = 100;
